@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheet.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">Basic Calculator</h1>
+<br>
+<br>
+
+
+     <div class="container-fluid" style="text-align: center;">
+
+      
+          <div class="col">
+              <input type="text" placeholder="0" id="txtScreen" style="height: 35px;" >
+            </div>
+          
+<div class="col" style="margin-top: 10px;">
+     
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('7')" value="7" style="width: 45px;">7</button>
+     
+     
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('8')" value="8" style="width: 45px;">8</button>
+    
+    
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('9')" value="9" style="width: 45px;">9</button>
+    
+     
+        <button type="button" class="btn btn-outline-warning"onclick="getvalue('/')" value="/" style="width: 45px;">/</button>
+     
+
+    </div>
+    <div class="col" style="margin-top: 10px;">
+     
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('4')"  value="4"style="width: 45px;">4</button>
+     
+     
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('5')" value="5" style="width: 45px;">5</button>
+    
+    
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('6')" value="6" style="width: 45px;">6</button>
+    
+     
+        <button type="button" class="btn btn-outline-warning" onclick="getvalue('*')" value="x"  style="width: 45px;">x</button>
+     
+
+    </div>
+    <div class="col" style="margin-top: 10px;">
+     
+       
+     
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('1')" value="1" style="width: 45px;">1</button>
+    
+    
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('2')" value="2" style="width: 45px;">2</button>
+    
+     
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('3')"  value="3" style="width: 45px;">3</button>
+        
+    
+     
+        <button type="button" class="btn btn-outline-warning" onclick="getvalue('+')" value="+" style="width: 45px;">+</button>
+     
+
+    </div>
+    <div class="col" style="margin-top: 10px;">
+     
+        <button type="button" class="btn btn-outline-secondary" onclick="clearAll()" value="" style="width: 45px;">C</button>
+     
+      <button type="button" class="btn btn-outline-secondary"value="0" onclick="getvalue('0')" style="width: 45px;">0</button>
+        
+    
+    
+        <button type="button" class="btn btn-outline-secondary" onclick="getvalue('.')"  value="." style="width: 45px;">.</button>
+    
+     
+        <button type="button" class="btn btn-outline-warning" onclick="calculate()"  style="width: 45px;">=</button>
+     
+
+    </div>
+
+     </div>
+    
+     
+
+
+    <script>
+ var display =  document.getElementById("txtScreen")
+var result;
+ 
+
+function getvalue(a){
+    
+   display.value += a
+   
+}
+
+function calculate(){
+  
+    result = eval(display.value);
+   document.getElementById("txtScreen").value =result ;
+
+}
+ function clearAll()
+ {
+
+   display.value =null;
+
+ }
+
+    </script>
+</body>
+</html>
